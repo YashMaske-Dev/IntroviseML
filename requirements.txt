@@ -1,0 +1,10 @@
+Flask==2.2.5
+gdown==4.7.1
+moviepy==1.0.3
+openai-whisper==20231117
+opencv-python==4.8.1.78
+numpy==1.23.5
+mediapipe==0.10.9
+keras==2.12.0
+tensorflow==2.12.0
+gunicorn==20.1.0
