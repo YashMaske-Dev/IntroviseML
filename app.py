@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS  # Import flask-cors
 import os
 import gdown
 import concurrent.futures
@@ -12,6 +13,7 @@ from collections import Counter
 import re
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 # Load emotion model
 FER_MODEL_PATH = os.path.join(os.path.dirname(__file__), "face_model.h5")
@@ -123,4 +125,3 @@ def handler(event, context):
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
-
